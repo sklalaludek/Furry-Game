@@ -1,0 +1,22 @@
+{
+  "name": "furry_game",
+  "version": "1.0.0",
+  "description": "a simple game in javascript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sklalaludek/WAR_FRO_S_14_Free_Week_Workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sklalaludek/WAR_FRO_S_14_Free_Week_Workshop/issues"
+  },
+  "homepage": "https://github.com/sklalaludek/WAR_FRO_S_14_Free_Week_Workshop#readme",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
