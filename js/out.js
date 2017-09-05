@@ -142,6 +142,7 @@ var Game = function() {
     this.checkCoinCollision = function () {
                 if (this.furry.x === this.coin.x && this.furry.y === this.coin.y) {
                     document.querySelector('.coin').classList.remove('coin');
+                    document.getElementById('coin').play();
                     var scoreCounter = document.querySelector('#score div strong');
 
                     this.coin = new Coin();
