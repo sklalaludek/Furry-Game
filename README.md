@@ -1,7 +1,6 @@
 # Furry
 
 JavaScript game with OOP approache.
-Work in progress..
 
 ## How to play?
 
