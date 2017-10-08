@@ -14,18 +14,16 @@ var Game = function() {
       return x + (y * 10);
   };
 
+    this.hideVisibleFurry = function() {
+      document.querySelector('.furry').classList.remove('furry');
+  };
+
     this.showFurry = function() {
          this.board[ this.index(this.furry.x,this.furry.y) ].classList.add('furry');
     };
 
     this.showCoin = function() {
         this.board[ this.index(this.coin.x,this.coin.y)].classList.add('coin');
-    };
-
-    this.startGame = function() {
-        this.idSetInterval = setInterval(function () {
-                self.moveFurry();
-        }, this.speed);
     };
 
     this.moveFurry = function() {
@@ -46,8 +44,10 @@ var Game = function() {
         this.checkCoinCollision();
     };
 
-    this.hideVisibleFurry = function() {
-        document.querySelector('.furry').classList.remove('furry');
+    this.startGame = function() {
+        this.idSetInterval = setInterval(function () {
+                self.moveFurry();
+        }, this.speed);
     };
 
     this.turnFurry = function(event) {
@@ -106,6 +106,8 @@ var Game = function() {
         if (this.furry.x < 0 || this.furry.y < 0 || this.furry.x > 9 || this.furry.y > 9) {
             clearInterval(this.idSetInterval);
             document.getElementById('bump').play();
+            this.board[this.index(this.coin.x, this.coin.y)].classList.remove('coin');
+            
             document.querySelector('#board').classList.add('invisible');
             document.querySelector('#score').classList.add('invisible');
             document.querySelector('#over').classList.remove('invisible');

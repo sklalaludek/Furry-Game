@@ -1,14 +1,29 @@
-var Game = require('./game.js');
+    document.addEventListener("DOMContentLoaded", function() {
+        var Game = require('./game.js');
 
-document.addEventListener("DOMContentLoaded", function() {
-    var newGame = new Game();
+        var newGame = new Game();
 
-    newGame.showCoin();
-    newGame.showFurry(); 
-    newGame.startGame();
+        newGame.showFurry();
+        newGame.showCoin();
+        newGame.startGame();
 
-    document.addEventListener('keydown', function(event) {
-            newGame.turnFurry(event);
-    });
+        document.addEventListener('keydown', function(event) {
+                newGame.turnFurry(event);
+        });
 
+        /*var playAgain = document.querySelector('button');
+        playAgain.addEventListener('click', function() {
+            var overBoard = document.getElementById('over');
+            overBoard.classList.add('invisible');
+
+            var newGame = new Game();
+
+            newGame.showFurry();
+            newGame.showCoin();
+            newGame.startGame();
+
+            document.addEventListener('keydown', function(event) {
+                    newGame.turnFurry(event);
+            });
+        });*/
 });
